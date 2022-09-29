@@ -49,5 +49,4 @@ public class test1 {
         userDao2.UserDaoMethod();
         userService2.UserServiceMethod();
     }
-
 }
