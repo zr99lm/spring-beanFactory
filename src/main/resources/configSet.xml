@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--    类的set方法注入-->
+    <bean id="studentService" class="com.zr.service.StudentService">
+        <property name="studentDao" ref="studentDao"></property>
+        <property name="host" value="127.0.0.1"/>
+        <property name="list">
+            <list>
+                <value>周杰伦</value>
+                <value>林俊杰</value>
+                <value>邓紫棋</value>
+            </list>
+        </property>
+        <property name="map">
+            <map>
+                <entry key="1" value="jay"></entry>
+                <entry key="2" value="jj"></entry>
+            </map>
+        </property>
+    </bean>
+    <bean id="studentDao" class="com.zr.dao.StudentDao"/>
+</beans>

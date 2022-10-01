@@ -3,6 +3,9 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
-    <import resource="config1.xml"/>
-    <import resource="config2.xml"/>
+        <!--静态工厂注入-->
+        <bean id="typeService" class="com.zr.service.TypeService">
+            <property name="typeDao" ref="typeDao"></property>
+        </bean>
+        <bean id="typeDao" class="com.zr.dao.factory.Static_Factory_inject" factory-method="createTypeDao"></bean>
 </beans>

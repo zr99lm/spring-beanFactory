@@ -5,7 +5,4 @@
         https://www.springframework.org/schema/beans/spring-beans.xsd">
     <import resource="config1.xml"/>
     <import resource="config2.xml"/>
-
-
-
 </beans>

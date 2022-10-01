@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--静态工厂方式-->
+<!--<bean id="userDao" class=></bean>-->
+<!--    <bean id="userDao" class="com.zr.dao.factory.UserDaoFactory" factory-method="createUserDaos"/>-->
+    <!-- more bean definitions go here -->
+<!--    实例化工厂方式-->
+    <bean id="UserDaoFactory" class="com.zr.dao.factory.UserDaoFactory" />
+    <bean id="userDao" factory-bean="UserDaoFactory" factory-method="createUserDao"/>
+</beans>
